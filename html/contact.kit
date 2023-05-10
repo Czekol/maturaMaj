@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skontaktuj się z nami | Forest Group</title>
+    <meta name="description" content="Skontaktuj się z nami by uzykać odpowiedż na twoje pytanie">
+    <!-- @include 'basepack.kit' -->
+</head>
+<!--  -->
+
+<body>
+    <!-- @include 'nav.kit' -->
+    <main class="main contact-main">
+        <section class="contact section white-section">
+            <div class="wrapper">
+                <h2 class="section-heading">Kontakt</h2>
+                <form action="/mail.php" method="post" class="contact__form">
+                    <div class="contact__form-box">
+                        <label for="name" class="contact__form-label">Imię i nazwisko</label>
+                        <input type="text" class="contact__form-input" id="name" name="name">
+                        <p class="contact__form-error-text">error</p>
+                    </div>
+
+                    <div class="contact__form-box">
+                        <label for="email" class="contact__form-label">Adres e-mail</label>
+                        <input type="text" class="contact__form-input" id="email" name="email">
+                        <p class="contact__form-error-text">error</p>
+                    </div>
+
+                    <div class="contact__form-box">
+                        <label for="msg" class="contact__form-label">Wiadomość</label>
+                        <textarea name="msg" id="msg" class="contact__form-textarea"></textarea>
+                        <p class="contact__form-error-text">error</p>
+                    </div>
+
+                    <button type="submit" class="contact__form-btn">Wyślij</button>
+                    <p class="contact__msg-status"></p>
+
+                    <div class="contact__form-box">
+                        <label for="privacy-policy">Akceptuje <a href="../privacypolicy.html"
+                                class="contact__form-link">Politykę Prywatności</a></label>
+                        <input type="checkbox" id="privacy-policy" class="contact__form-checkbox">
+                        <p class="contact__form-error-text">
+                            <i class="fa-solid fa-triangle-exclamation"></i> Pole wymagane
+                        </p>
+                    </div>
+                </form>
+
+                <h3 class="contact__title">Tu nas znajdziesz </h3>
+                <iframe title="google maps"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.898452497736!2d19.890660215718313!3d50.088188079426935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1683211737935!5m2!1spl!2spl"
+                    width="100%" height="375" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+        </section>
+    </main>
+
+
+    <!-- @include 'footer.kit' -->
+    <script src="/dist/js/script.min.js"></script>
+    <script src="/dist/js/form.min.js"></script>
+</body>
+
+</html>

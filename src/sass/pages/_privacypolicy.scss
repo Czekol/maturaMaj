@@ -1,0 +1,15 @@
+.privacy-policy-main {
+    margin: auto 0;
+}
+
+.privacy-policy {
+    margin-top: 50px;
+    padding: 6rem 2rem;
+	&__box {
+        margin-bottom: 5rem;
+		&-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+		}
+	}
+} 

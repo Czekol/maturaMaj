@@ -1,0 +1,242 @@
+@use 'colors' as color;
+@use 'mixin' as mixin;
+
+
+html {
+	scroll-padding-top: 78px;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	background-color: color.$white;
+	color: color.$black;
+	font-size: 1.6rem;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	overflow-x: hidden;
+}
+
+.stop-scrolling {
+	overflow-y: hidden;
+}
+
+.wrapper {
+	margin-inline: auto;
+	max-width: 1200px;
+	width: 100%;
+}
+
+.small-wrapper {
+	margin-inline: auto;
+	max-width: 960px;
+	width: 100%;
+}
+
+.section-heading {
+	margin-bottom: 2rem;
+	font-size: 3rem;
+	text-align: center;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+// HEADER
+
+.header {
+	position: relative;
+	margin-top: 80px;
+	padding: 0 2rem;
+	height: clamp(250px, 40vw, 400px);
+	background-image: url('/dist/img/mobile-stairs.jpg');
+	background-position: 50% 60%;
+	background-size: cover;
+	z-index: 2;
+
+	&__shadow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: 15;
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		color: color.$white;
+
+		&-title {
+			font-size: 1.7rem;
+			font-weight: 400;
+			z-index: 40;
+		}
+
+		&-text {
+			font-weight: 700;
+			font-size: 2.4rem;
+			z-index: 40;
+		}
+	}
+
+	.wrapper {
+		height: 100%;
+	}
+}
+
+// ABOUT-US
+
+.about-us {
+	padding: 6rem 2rem;
+	&__box {
+		padding-top: 1rem;
+		&-img {
+			width: 100%;
+			height: clamp(225px, 32vw, 350px);
+			object-fit: cover;
+		}
+		&-text {
+			&-title {
+				margin: 2rem 0 1rem;
+				font-size: 2.2rem;
+			}
+
+			&-text {
+				font-size: 1.6rem;
+				line-height: 1.6;
+			}
+
+			&-link {
+				@include mixin.linkAnimation(color.$black, color.$black, color.$white);
+			}
+		}
+	}
+}
+
+// HERO-IMG
+
+.hero-img {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 2rem;
+	height: clamp(225px, 35vw, 350px);
+	background-image: url('/dist/img/mobile-girl.jpg');
+	background-position: center;
+	z-index: -2;
+
+	&__shadow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: rgba(0, 0, 0, 0.449);
+		z-index: -1;
+	}
+
+	&__box {
+		padding: 2rem;
+		border: 2px solid color.$white;
+		z-index: 32;
+		&-title {
+			color: color.$white;
+			font-size: 2.5rem;
+			font-weight: 600;
+			text-align: center;
+		}
+	}
+}
+
+// OFFERS
+
+.offers {
+	padding: 6rem 2rem;
+	text-align: center;
+	&__text {
+		margin-bottom: 2rem;
+		font-size: 1.7rem;
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 3.5rem 4rem;
+		width: 100%;
+		min-height: 350px;
+		border-radius: 8px;
+		box-shadow: 0px 5px 13px -6px rgba(66, 68, 90, 1);
+
+		margin-top: 4rem;
+		&-title {
+			font-size: 2.4rem;
+			font-weight: 400;
+		}
+
+		&-price {
+			font-size: 4rem;
+			font-weight: 600;
+		}
+
+		&-info {
+			margin: 0 auto;
+			&-item {
+				margin: 0.5rem 0;
+				text-align: left;
+
+				&-icon {
+					&--check {
+						color: color.$lime;
+					}
+				}
+
+				&--excluded {
+					color: color.$gray2;
+				}
+			}
+		}
+
+		&-btn {
+			padding: 1rem;
+			width: 100%;
+			color: color.$black;
+			border-radius: 8px;
+			box-shadow: 0px 5px 13px -6px rgba(66, 68, 90, 1);
+			transition: .3s;
+
+			&--hover-white {
+				background-color: color.$white !important;
+			}
+			
+			&--hover-green {
+				background-color: color.$lime !important;
+			}
+
+			&--cta {
+				background-color: color.$lime;
+			}
+		}
+	}
+
+	&__more-offers {
+		display: inline-block;
+		margin-top: 2.8rem;
+		font-size: 1.8rem;
+		&-box {
+			display: inline-block;
+			font-size: 1.8rem;
+			white-space: nowrap;
+			&-link {
+
+				font-weight: 600;
+				@include mixin.linkAnimation(color.$lime, color.$lime, color.$white);
+			}
+		}
+	}
+}

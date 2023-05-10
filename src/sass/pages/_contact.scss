@@ -1,0 +1,109 @@
+@use 'colors' as color;
+@use 'mixin' as mixin;
+
+
+.contact-main {
+	.contact {
+		margin-top: 80px;
+		padding: 6rem 2rem;
+
+		&__form-box {
+			margin-bottom: 2.2rem;
+		}
+
+	
+
+		&__form {
+			display: flex;
+			flex-direction: column;
+			text-transform: uppercase;
+			padding-top: 2rem;
+
+			&-label {
+				display: block;
+				margin-bottom: 0.8rem;
+			}
+			&-input,
+			&-textarea {
+				padding: 0.9rem 1.8rem;
+				width: 100%;
+				border: 1px solid color.$light-gray2;
+				border-radius: 6px;
+			}
+
+			&-textarea {
+				min-height: 150px;
+				resize: vertical;
+			}
+
+			&-btn {
+				margin-bottom: 1.1rem;
+				padding: 1.6rem;
+				background-color: color.$lime;
+				border-radius: 6px;
+				font-size: 1.6rem;
+				text-transform: uppercase;
+			}
+
+			&-link {
+				@include mixin.linkAnimation(color.$lime, color.$lime, color.$white);
+				white-space: nowrap;
+			}
+
+			&-checkbox {
+				margin-left: 1rem;
+			}
+
+			&-error-text {
+				visibility: hidden;
+				margin-top: .8rem;
+				color: color.$error;
+				font-weight: 600;
+			}
+		}
+		&__title {
+			margin: 4rem 0 2rem;
+			font-size: 2.4rem;
+			font-weight: 300;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		&__msg-status {
+			position: fixed;
+			display: none;
+			// display: flex;
+			justify-content: center;
+			align-items: center;
+			top: 90px;
+			left: 50%;
+			transform:translateX(-50%); 
+			padding: 3rem;
+			width: min(calc(100% - 4rem) , 600px);
+			max-width: 1200px;
+			border-radius: 6px;
+			font-size: 1.8rem;
+			z-index: 10000;
+			overflow: hidden;
+
+			&.success {
+				display: flex;
+				background-color: color.$lime;
+			}
+
+			&.error {
+				display: flex;
+				background-color: color.$error;
+			}
+		}
+	}
+}
+
+
+.contact__form-box.error .contact__form-error-text {
+	visibility: visible;
+}
+.contact__form-box.error .contact__form-input {
+	border: 1px solid color.$error;
+}
+

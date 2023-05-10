@@ -1,0 +1,157 @@
+@use 'colors' as color;
+
+@media (width >= 992px) {
+	.section-heading {
+		font-size: 4rem;
+		margin-bottom: 3.2rem;
+	}
+
+	// NAV
+
+	.nav {
+		&__logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&__burger-btn {
+			display: none;
+		}
+
+		&__desktop {
+			display: flex;
+
+			&-link {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100px;
+				color: color.$black;
+				transition: background-color 0.3s, color 0.3s;
+
+				&.active {
+					background-color: color.$black;
+					color: color.$white;
+				}
+
+				&:hover {
+					background-color: color.$black;
+					color: color.$white;
+				}
+			}
+		}
+
+		&__mobile {
+			display: none;
+		}
+
+		.wrapper {
+			height: 100%;
+		}
+	}
+
+	// Header
+
+	.header {
+		background-image: url('/dist/img/desktop-stairs.jpg');
+		// min-height: 400px;
+		&__box {
+			&-title {
+				font-size: 2.3rem;
+			}
+
+			&-text {
+				font-weight: 700;
+				font-size: 3.8rem;
+			}
+		}
+	}
+
+	// ABOUT-US
+
+	.about-us {
+		&__heading {
+			font-size: 4rem;
+		}
+
+		&__box {
+			display: flex;
+
+			&-img {
+				width: calc(50% - 6rem);
+				margin-right: 6rem;
+			}
+
+			&-text {
+				width: 50%;
+				&-title {
+					margin: 0 0 1rem;
+					font-size: 2.8rem;
+					text-align: left;
+				}
+
+				&-text {
+					font-size: 1.8rem;
+					line-height: 1.8;
+				}
+			}
+		}
+	}
+
+	// HERO-IMG
+
+	.hero-img {
+		background-image: url('/dist/img/desktop-girl.jpg');
+
+		&__box {
+			padding: 2.6rem;
+			&-title {
+				font-size: 3.8rem;
+			}
+		}
+	}
+
+	.offers {
+		&__heading {
+			font-size: 4rem;
+		}
+
+		&__text {
+			font-size: 2rem;
+		}
+
+		&__cards {
+			justify-content: space-between;
+			flex-wrap: nowrap;
+		}
+
+		&__card {
+			width: calc(100% / 3 - 3rem);
+			&:last-child {
+				margin-inline: 0;
+			}
+		}
+	}
+
+	// OFFER SUBPAGE
+	.contact-main {
+		.contact {
+			&__title {
+				font-size: 3rem;
+			}
+		}
+	}
+}
+
+@media (width >= 1050px) {
+	.about-us {
+		&__box {
+			&-text {
+				&-text {
+					line-height: 2;
+				}
+			}
+		}
+	}
+}

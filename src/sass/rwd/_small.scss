@@ -1,0 +1,28 @@
+@media (width >= 576px) {
+	// ABOUT-US
+
+	.about-us {
+		&__box {
+			&-img {
+				display: block;
+				margin-inline: auto;
+				width: 70%;
+			}
+			&-text {
+				&-title {
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	// FOOTER
+
+	.footer {
+		&__boxes {
+			display: flex;
+			justify-content: space-evenly;
+			text-align: left;
+		}
+	}
+} 

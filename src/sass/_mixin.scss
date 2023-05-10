@@ -1,0 +1,25 @@
+@mixin linkAnimation($color, $bgc, $hover) {
+	position: relative;
+	color: $color;
+	transition: 0.3s;
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 0;
+		width: 100%;
+		background-color: $bgc;
+		z-index: -1;
+		transition: 0.3s;
+	}
+
+	&:hover::after {
+		height: 100%;
+	}
+
+	&:hover {
+		color: $hover;
+	}
+} 

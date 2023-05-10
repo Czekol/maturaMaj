@@ -1,0 +1,48 @@
+@use 'colors' as color;
+
+.footer {
+	margin-top: auto;
+	background-color: color.$light-gray;
+
+	.small-wrapper {
+		padding: 6rem 2rem;
+	}
+	&__heading {
+		display: none;
+	}
+
+	&__boxes {
+		text-align: center;
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+
+		&:last-child &-link:last-of-type {
+			margin-bottom: 0;
+		}
+
+		&-title {
+			margin-bottom: 1.5rem;
+			font-size: 2.2rem;
+		}
+
+		&-link {
+			margin-bottom: 1rem;
+			color: color.$gray3;
+			font-size: 1.4rem;
+			font-weight: 400;
+			&:last-child {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+
+	&__bottom-text { 
+		padding: 2rem;
+		color: color.$gray3;
+		border-top: 1px solid color.$btgray;
+		text-align: center;
+	}
+}

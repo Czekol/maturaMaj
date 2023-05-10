@@ -1,0 +1,12 @@
+@use 'colors' as color;
+@use 'mixin' as mixin;
+@use 'reset';
+@use 'nav';
+@use 'style';
+@use 'footer';
+@use './pages/offer';
+@use './pages/contact';
+@use './pages/privacypolicy';
+@use './rwd/small';
+@use './rwd/medium';
+@use './rwd/large'; 
