@@ -47,8 +47,8 @@ body {
 	position: relative;
 	margin-top: 80px;
 	padding: 0 2rem;
-	height: clamp(250px, 40vw, 400px);
-	background-image: url('/dist/img/mobile-stairs.jpg');
+	height: clamp(270px, 40v5, 400px);
+	background-image: url('../../dist/img/mobile-stairs.jpg');
 	background-position: 50% 60%;
 	background-size: cover;
 	z-index: 2;
@@ -126,7 +126,7 @@ body {
 	align-items: center;
 	padding: 0 2rem;
 	height: clamp(225px, 35vw, 350px);
-	background-image: url('/dist/img/mobile-girl.jpg');
+	background-image: url('../../dist/img/mobile-girl.jpg');
 	background-position: center;
 	z-index: -2;
 
