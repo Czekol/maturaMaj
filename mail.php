@@ -3,7 +3,7 @@
 $name = $_POST["name"]; 
 $from = $_POST["email"]; 
 $subject = "Wiadomość z formularza na stronie XYZ";
-$to = "adres@mailowy"; 
+$to = "czekol.kupski@gmail.com"; 
 $message = $_POST["msg"]; 
 
 $txt = "Imię: " . $name . "\r\n" . "Email: " . $from . "\r\n" . "\r\n" . "Treść: " . $message;
